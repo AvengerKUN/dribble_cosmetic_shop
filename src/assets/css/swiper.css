@@ -1,0 +1,13 @@
+.my-bullet{
+    background: #f1f2fb;
+    width: .5rem;
+    height: .5rem;
+    display: inline-block;
+    border-radius: .25rem;
+    margin: 0 .5rem 0 .5rem;
+    transition: .5s;
+}
+.my-bullet-active{
+    background: #f1f2fb;
+    width: 2rem;
+}

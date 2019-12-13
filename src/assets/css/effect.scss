@@ -1,0 +1,36 @@
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation-top-to-bottom($id,$x,$y,$p){
+  @include keyframes(top-to-bottom-#{$id}){
+    0%{
+      transform: translateX(calc(#{$x})) translateY(calc(#{$y} - 100%));
+    }
+    100% {
+      transform: translateX(calc(#{$x})) translateY(calc(#{$y}));
+    }
+  }
+
+  animation: top-to-bottom-#{$id} #{$p}
+}
+
+@keyframes hide-to-show {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100;
+  }
+}
